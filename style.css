@@ -2,8 +2,9 @@
     margin: 0;
     padding: 0;
 }
+
 .welcomescreen{
-    min-height: 100vh;
+    /* min-height: 100vh; */
     background-image: url("Images/background\ Image.jpg");
     /* filter: opacity(-25%); */
     position : relative;
@@ -17,6 +18,7 @@
     background-size: cover;
     z-index: 0;
 }
+
 .welcomescreen > .box{
     height: 100%;
     width: 100%;
@@ -56,7 +58,7 @@
     text-align: center;
     padding: 2px 5px;
 }
-#language>option{
+option{
     color: black;
 }
 .signIn ,.signIn>h3{
@@ -168,5 +170,112 @@
     }
     .content>p:nth-child(2){
         font-size: 100%;
+    }
+}
+
+
+
+
+
+
+/* Main Div Styling  */
+
+.main>h2{
+    color: white;
+    padding: 20px;
+    margin: auto;
+    width: 70%;
+}
+
+.main{
+    background-color: black;
+}
+
+.CountryandMovies{
+    display: flex;
+    justify-content: flex-start;
+    margin: auto;
+    column-gap: 20px;
+    width: 70%;
+}
+.CountryandMovies *{
+    /* width: 20%; */
+    padding: 10px;
+    background-color: transparent;
+    color: white;
+    border-radius: 5px;
+    font-size: 15px;
+}
+.CountryandMovies select option{
+    color: black;
+}
+.main > .scrollimages{
+    width: 70%;
+    /* background-color: aqua; */
+    /* height: 10vh; */
+    margin: 20px auto;
+    display: flex;
+    /* justify-content: space-around; */
+    overflow-x: scroll;
+    overflow-y: hidden;
+    box-sizing: border-box;
+}
+.scrollimages>img{
+    flex-shrink: 0;
+    margin : 3px 20px;
+    border-radius: 20px;
+}
+.reasons{
+    /* height: 50vh; */
+    width : 75%;
+    margin : auto;
+    /* background-color: aqua; */
+    display:flex;
+    justify-content: space-between;
+    overflow-x: auto;
+    overflow-y: auto;
+    box-sizing: border-box;
+    align-items: center;
+}
+.reasons >div{
+    /* height : 100%; */
+    box-sizing: border-box;
+    flex-shrink: 0;
+    /* text-align: center; */
+    width : 20vw;
+    margin: 30px 20px;
+    color: white;
+    background-color: mediumvioletred;
+    border: 2px solid goldenrod;
+    border-radius: 30px;
+    outline-offset: 3px;
+    outline:2px solid  gold;
+    box-shadow: 5px 5px 15px 5px rgb(37, 37, 37) inset;
+}
+.scrollimages > img:hover{  /*dont give space between div and :hover*/
+    transform: scale(1.09);
+    transition: transform 0.2s 0s ease-out ;
+}
+.reasons > div> h1{
+    color: rgb(192, 192, 192);
+    font-family: sans-serif;
+}
+.reasons > div *{
+    margin-top: 10%;
+    margin : 10%;
+    color: rgb(220, 217, 217);
+    overflow: auto;
+}
+@media screen and (max-width :900px){
+    html {
+        overflow-y: auto;
+    }
+    
+    .reasons{
+        display: block;
+    }
+    .reasons > div{
+        width: 80%;
+        margin: 20px auto;
     }
 }
